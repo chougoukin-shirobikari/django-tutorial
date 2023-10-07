@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ article.id }}の投稿詳細ページ</h1>
+<div class="container">
+    <p>{{ article.author }} : {{ article.created_at }}</p>
+    <p>{{ article.content }}</p>
+</div>
+<p><a href='{% url "bbs:index" %}'>一覧ページへ戻る</a></p>
+{% endblock %}

@@ -5,7 +5,9 @@
         <title>Djangoを使ってみよう！</title>
     </head>
     <body>
-        <h1>HTMLを出力してみよう</h1>
-        <p>PythonのWebアプリケーションフレームワークDjangoでHTMLファイルを出力してみましょう！</p>
+        <h1>クラスベースの汎用ビューを使ってみよう</h1>
+        {% for article in object_list %}
+          <p>{{ article.content }}</p>
+        {% endfor %}
     </body>
 </html>
