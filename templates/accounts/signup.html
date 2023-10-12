@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Djangoで作るサインアップ昨日</h1>
+<section>
+    <form method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>サインアップ</button>
+    </form>
+</section>
+{% endblock %}
