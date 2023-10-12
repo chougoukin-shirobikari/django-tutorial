@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block content %}
 <h1>CRUDアプリを作ってみよう</h1>
 {% for article in object_list %}
@@ -7,7 +8,9 @@
     <p><a href='{% url "bbs:detail" article.id %}'>{{ article.content }}</a></p>
 </div>
 {% endfor %}
+{% if user.is_authenticated %}
 <div>
     <button onclick='location.href="{% url "bbs:create" %}"'>新規投稿</button>
 </div>
+{% endif %}
 {% endblock %}
